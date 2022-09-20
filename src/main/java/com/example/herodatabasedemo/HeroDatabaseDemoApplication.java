@@ -12,18 +12,7 @@ public class HeroDatabaseDemoApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(HeroDatabaseDemoApplication.class, args);
-        String url = "jdbc:mysql://20.223.219.8:3306/mysql";
-        String username = "root";
-        String password = "mypassword";
 
-        System.out.println("Super Power Cow");
-
-        try (
-                Connection con = DriverManager.getConnection(url, username, password)){
-            System.out.println("Cow Wins");
-        } catch (SQLException e) {
-            throw new IllegalStateException("Cow loose", e);
-        }
     }
 
 }
